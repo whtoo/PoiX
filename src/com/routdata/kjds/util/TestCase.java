@@ -15,24 +15,26 @@ public class TestCase implements IExcelFilterCallbacks{
 	public static void main(String[] args) {
 		
 		ExcelFilter testFilter = new ExcelFilter();
-		testFilter.initWithFilePath("resources/mailImportTemplate.xlsx");
+		testFilter.initWithFilePath("resources/goodsImportTemplate.xls");
 		FilterRule rule = new FilterRule();
-		rule.setRuleDefPath("resources/ValidatRules_mail.xml"); 
+		rule.setRuleDefPath("resources/ValidatRules_goods.xml"); 
 		rule.setIsHasHeader(new Boolean(true));
 		rule.settHeaders(new ArrayList<String>());
 		try {
 			TestCase ca = new TestCase();
-			testFilter.setCallbacks(true);
-			testFilter.setCaller(ca);
+			testFilter.setCallbacks(false);
+			//testFilter.setCaller(ca);
+			testFilter.isEventMode = true;
 			testFilter.validateWithSetting(rule);
+			
 		} catch (DocumentException e) {
 			e.printStackTrace();
 		}
 		
-		//List<Map<String,Object>> succList = testFilter.getResultSet().getDataList();
+		List<Map<String,Object>> succList = testFilter.getResultSet().getDataList();
 		
 		List<List<String>> errorList = testFilter.getResultSet().getDiscardIndexList();
-		//logger.info("succ at "+succList);
+		logger.info("succ at "+succList);
 		
 		logger.info("error at "+errorList);
 	}

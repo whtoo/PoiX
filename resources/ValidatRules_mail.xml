@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidatorList>
+	<!-- 邮件号	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="0" desc="列数"/>
+		<property name="isRequaried" value="true" desc="是否为空"/>
+		<property name="typeStr" value="String" desc="字段类型"/>
+		<property name="regPatternStr" value="" desc="正则表达式"/>
+		<property name="length" value="0,30" desc="最大长度" />
+	</ValidatorItem>
+	<!--  清单申报日期	 -->
+	<ValidatorItem>
+		<property name="mappedIndex" value="1" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="Date" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,30" />
+	</ValidatorItem>
+	<!--进出口日期	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="2" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="Date" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,20" />
+	</ValidatorItem>
+	<!--企业备案号	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="3" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="String" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,50" />
+	</ValidatorItem>
+	<!--进出口国别地区代码	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="4" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="Long" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,50" />
+	</ValidatorItem>
+	<!--进出口标志	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="5" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="String" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="1,2" />
+	</ValidatorItem>
+	<!--操作类型	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="6" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="String" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="1,2" />
+	</ValidatorItem>
+	<!--商品序号	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="7" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="Long" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,10" />
+	</ValidatorItem>
+	<!--商品备案号	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="8" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="String" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,32" />
+	</ValidatorItem>
+	<!--申报单价	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="9" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="Double" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,23" />
+	</ValidatorItem>
+	<!--成交币制代码	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="10" />
+		<property name="isRequaried" value="true" />
+		<property name="typeStr" value="Long" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,23" />
+	</ValidatorItem>
+	<!--申报数量	-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="11" />
+		<property name="isRequaried" value="false" />
+		<property name="typeStr" value="Double" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,50" />
+	</ValidatorItem>
+	<!--净重(kg)-->
+	<ValidatorItem>
+		<property name="mappedIndex" value="12" />
+		<property name="isRequaried" value="false" />
+		<property name="typeStr" value="Double" />
+		<property name="regPatternStr" value="" />
+		<property name="length" value="0,200" />
+	</ValidatorItem>
+</ValidatorList>
