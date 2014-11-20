@@ -192,7 +192,7 @@ public class ExcelFilter implements HSSFListener {
 
 		case SSTRecord.sid:
 			sstRecord = (SSTRecord) record;
-		
+			logger.debug("SSTRecord sid");
 			break;
 
 		case BlankRecord.sid:
@@ -201,6 +201,7 @@ public class ExcelFilter implements HSSFListener {
 			thisRow = brec.getRow();
 			thisColumn = brec.getColumn();
 			thisStr = "";
+			logger.debug("BlankRecord sid");
 			rowMap.put(String.valueOf(thisColumn), thisStr);
 			break;
 		case BoolErrRecord.sid:
@@ -209,6 +210,7 @@ public class ExcelFilter implements HSSFListener {
 			thisRow = berec.getRow();
 			thisColumn = berec.getColumn();
 			thisStr = "";
+			logger.debug("BoolErrRecord sid");
 			rowMap.put(String.valueOf(thisColumn), thisStr);
 			break;
 		case FormulaRecord.sid:
@@ -249,6 +251,7 @@ public class ExcelFilter implements HSSFListener {
 				data2[1] = "String";
 				rowMap.put(String.valueOf(thisColumn), data2);
 			}
+			logger.debug("StringRecord sid");
 			break;
 
 		case LabelRecord.sid:
@@ -287,6 +290,7 @@ public class ExcelFilter implements HSSFListener {
 			thisColumn = nrec.getColumn();
 			// TODO: Find object to match nrec.getShapeId()
 			thisStr = '"' + "(TODO)" + '"';
+			
 			rowMap.put(String.valueOf(thisColumn), thisStr);
 			break;
 		case NumberRecord.sid:
@@ -310,7 +314,11 @@ public class ExcelFilter implements HSSFListener {
 			thisStr = '"' + "(TODO)" + '"';
 			rowMap.put(String.valueOf(thisColumn), thisStr);
 			break;
+		
+			
 		default:
+			//logger.debug("record sid"+record.getSid());
+			
 			break;
 		}
 
@@ -325,6 +333,12 @@ public class ExcelFilter implements HSSFListener {
 			thisRow = mc.getRow();
 			thisColumn = mc.getColumn();
 			thisStr = "";
+			Object[] obx = new Object[2];
+			obx[0] = null;
+			obx[1] = "miss";
+			rowMap.put(String.valueOf(thisColumn), obx);
+			
+			
 		}
 
 		// If we got something to print out, do so
@@ -410,6 +424,7 @@ public class ExcelFilter implements HSSFListener {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		
 	}
 	
