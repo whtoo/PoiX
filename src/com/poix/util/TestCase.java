@@ -1,4 +1,4 @@
-package com.routdata.kjds.util;
+package com.poix.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,6 @@ public class TestCase implements IExcelFilterCallbacks{
 		try {
 			TestCase ca = new TestCase();
 			testFilter.setCallbacks(false);
-			//testFilter.setCaller(ca);
 			testFilter.isEventMode = true;
 			testFilter.validateWithSetting(rule);
 			

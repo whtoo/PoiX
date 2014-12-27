@@ -1,4 +1,4 @@
-package com.routdata.kjds.util;
+package com.poix.util;
 
 import java.io.Serializable;
 import java.util.List;
